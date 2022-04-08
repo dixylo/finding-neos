@@ -1,0 +1,55 @@
+@import '../../../styles.less';
+
+.home {
+  background-image: url('../../../assets/home.png');
+
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 10px;
+  
+    .title {
+      .font(yellow, 2.5rem);
+    }
+  
+    .intro {
+      .font();
+    }
+  }
+  
+  .asteroid {
+    animation: xAxis 10s infinite cubic-bezier(0.02, 0.01, 0.21, 1);
+  
+    &::after {
+      content: '';
+      display: block;
+      width: 8vw;
+      height: 8vw;
+      background-image: url('../../../assets/asteroid.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      animation: yAxis 10s infinite cubic-bezier(0.3, 0.27, 0.07, 1.64);
+    }
+    
+    @keyframes yAxis {
+      50% {
+        animation-timing-function: cubic-bezier(0.02, 0.01, 0.21, 1);
+        transform: translateY(80vh);
+      }
+    }
+    
+    @keyframes xAxis {
+      50% {
+        animation-timing-function: cubic-bezier(0.3, 0.27, 0.07, 1.64);
+        transform: translateX(100vw);
+      }
+    }
+  }
+}
+
+.button-line {
+  display: flex;
+  align-items: center;
+}

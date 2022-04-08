@@ -1,0 +1,36 @@
+@import '../../../styles.less';
+
+.neodetail {
+  background-image: url('../../../assets/blackboard.jpg');
+
+  .images {
+    position: absolute;
+    top: 10vh;
+    right: 50vw;
+    display: flex;
+    justify-content:space-around;
+    align-items: baseline;
+
+    .image {
+      animation: spin 10s linear infinite;
+    }
+  }
+
+  .details {
+    .font(white, 24px);
+    position: absolute;
+    top: 10vh;
+    right: 5vw;
+    width: 38vw;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .images {
+      right: 70
+    }
+
+    .details {
+      font-size: 14px;
+    }
+  }
+}

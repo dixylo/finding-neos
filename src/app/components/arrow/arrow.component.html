@@ -1,0 +1,6 @@
+<div
+  [ngClass]="{'arrow': true, 'right': direction === 'right' }"
+  (click)="handleClick()"
+>
+  <span>{{ direction === 'left' ? '&#10094;' : '&#10095;' }}</span>
+</div>

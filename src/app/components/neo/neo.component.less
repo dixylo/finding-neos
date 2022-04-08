@@ -1,0 +1,43 @@
+.neo {
+  position: absolute;
+  cursor: pointer;
+
+  .image {
+    width: 100%;
+    height: 100%;
+    animation: spin 2s linear infinite;
+  }
+
+  & .tip {
+    width: 220px;
+    visibility: hidden;
+    background-color: white;
+    color: black;
+    border-radius: 6px;
+    padding: 5px;
+    opacity: 0.8;
+    font-size: 1.5rem;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+
+  &:hover .tip {
+    visibility: visible;
+  }
+
+  .above {
+    transform: translate(50px, -230px);
+  }
+}
+
+.properties {
+  font-size: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}

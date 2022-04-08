@@ -1,0 +1,31 @@
+<div class="container neolist">
+  <p class="date">
+    {{ count === 0 ? date + "  Seems nobody's around" : date }}
+  </p>
+  <div *ngIf="data && neos">
+    <app-neo
+      *ngFor="let neo of neos; let i=index"
+      [index]="i"
+      [data]="neo"
+      [count]="count"
+      [diameterRange]="diameter_range"
+      [distanceRange]="distance_range"
+    ></app-neo>
+  </div>
+  <div class="earth">
+    <img class="image" alt="earth" src="../../../assets/earth.png" />
+    <div class="tip">
+      <p><span class="properties">Name:</span> Earth</p>
+      <p><span class="properties">Diameter:</span> 12,742 km</p>
+      <p><span class="properties">From Moon:</span> 0.38 Mkm</p>
+    </div>
+  </div>
+  <app-arrow
+    direction="left"
+    (onClick)="showAnotherDay($event)"
+  ></app-arrow>
+  <app-arrow
+    direction="right"
+    (onClick)="showAnotherDay($event)"
+  ></app-arrow>
+</div>

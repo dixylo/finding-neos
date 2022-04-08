@@ -1,0 +1,25 @@
+<div class="container neodetail">
+  <div class="images">
+    <img
+      alt="sky tower"
+      src="../../../assets/cn_tower.png"
+      [ngStyle]="handleScale().towerStyle"
+    />
+    <img
+      class="image"
+      alt="asteroid"
+      src="../../../assets/asteroid.png"
+      [ngStyle]="handleScale().neoStyle"
+    />
+  </div>
+  <div class="details">
+    <p>Did you know?</p>
+    <p>Our Neo is called {{ name }}.</p>
+    <p>He is {{ diameter_min }}~{{ diameter_max }} meters wide, while our CN Tower is {{ TOWER_HEIGHT }} meters tall.</p>
+    <p>He is flying by at a speed of {{ speed }} km/s,</p>
+    <p>but is {{ distance.toFixed(1) }} Mkm away from us,</p>
+    <p>and as dim as a candle {{ magnitude }} km away,</p>
+    <p>so no worries about this little buddy.</p>
+    <app-button title="Return" route="/neos"></app-button>
+  </div>
+</div>

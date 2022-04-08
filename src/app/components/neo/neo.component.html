@@ -1,0 +1,13 @@
+<div
+  class="neo"
+  [ngStyle]="dynamicStyle"
+>
+  <div [routerLink]="route">
+    <img class="image" [alt]="name" src="../../../assets/asteroid.png" />
+  </div>
+  <div [ngClass]="{ 'tip': true, 'above': y > 50 }">
+    <p><span class="properties">Name:</span> {{ name }}</p>
+    <p><span class="properties">Diameter:</span> ~{{ diameter }} m</p>
+    <p><span class="properties">Distance:</span> {{ distance.toFixed(1) }} Mkm</p>
+  </div>
+</div>
